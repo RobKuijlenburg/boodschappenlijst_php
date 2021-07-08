@@ -1,22 +1,17 @@
 <?php
 
-function connectToDb() {
-    try {
-        return new PDO('mysql:host=127.0.0.1;dbname=groceries', 'root', 'admin');
-    } catch (PDOException $e) {
-        die($e->getMessage());
-    }
+
+$sum = 0;
+$total = 0;
+
+for ($i = 0 ; $i < count($groceries) ; $i++){
+    $sum += $groceries[$i]->number * $groceries[$i]->price;
 };
 
-function fetchAllGroceries($pdo) {
+for ($a = 0 ; $a < count($groceries) ; $a++){
+    $total = 0 + $sum;
+};
 
-    $statement = $pdo->prepare('select * from groceries');
-
-    $statement-> execute();
-
-    return $statement->fetchAll(PDO::FETCH_CLASS, 'Grocery');
-
-}
 
 function dd($data) {
     echo '<pre>';

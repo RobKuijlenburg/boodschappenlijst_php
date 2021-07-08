@@ -34,7 +34,7 @@
 
         <tr>
             <td class='totaal' colspan=3>Totaal</td>
-            <td class='totalCost'></td>
+            <td class='totalCost'><?= $total ?></td>
         </tr>
 
     </table>
