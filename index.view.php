@@ -19,14 +19,14 @@
         <?php foreach ($groceries as $groceries) : ?>
 
         <tr>
-            <td><?= $groceries["name"]; ?></td>
-            <td class='productPrice'><?= $groceries["price"]; ?></td>
+            <td><?= $groceries->name; ?></td>
+            <td class='productPrice'><?= $groceries->price; ?></td>
             <td class='quantityChange'>
                 <button class="sub">-</button>
-                    <span class='productQuantity'><?=$groceries["number"];?></span>
+                    <span class='productQuantity'><?=$groceries->number;?></span>
                 <button class="add">+</button>
             </td>
-            <td class='productTotalCost'><?=$groceries["price"] * $groceries["number"];?></td>
+            <td class='productTotalCost'><?=$groceries->price * $groceries->number;?></td>
         </tr>
 
         <?php endforeach; ?>

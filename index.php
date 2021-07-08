@@ -27,5 +27,5 @@ $pdo = connectToDb();
 
 $groceries = fetchAllGroceries($pdo);
 
-
+// dd($groceries);
 require 'index.view.php';
