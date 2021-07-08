@@ -1,22 +1,31 @@
 <?php
 
 
-$products = [
-    ["naam" => "Brood", "aantal" => 1, "prijs" => 1.00],
-    ["naam" => "Brocolli", "aantal" => 1, "prijs" => 0.99],
-    ["naam" => "Krentenbol", "aantal" => 1, "prijs" => 1.20],
-    ["naam" => "Noten", "aantal" => 1, "prijs" => 2.99]
-];
+require 'functions.php';
+require 'groceries.php';
 
-$sum = 0;
-$total = 0;
 
-for ($i = 0 ; $i < count($products) ; $i++){
-    $sum += $products[$i]["aantal"] * $products[$i]["prijs"];
-};
+// $products = [
+//     ["naam" => "Brood", "aantal" => 1, "prijs" => 1.00],
+//     ["naam" => "Brocolli", "aantal" => 1, "prijs" => 0.99],
+//     ["naam" => "Krentenbol", "aantal" => 1, "prijs" => 1.20],
+//     ["naam" => "Noten", "aantal" => 1, "prijs" => 2.99]
+// ];
 
-for ($a = 0 ; $a < count($products) ; $a++){
-    $total = 0 + $sum;
-};
+// $sum = 0;
+// $total = 0;
+
+// for ($i = 0 ; $i < count($products) ; $i++){
+//     $sum += $products[$i]["aantal"] * $products[$i]["prijs"];
+// };
+
+// for ($a = 0 ; $a < count($products) ; $a++){
+//     $total = 0 + $sum;
+// };
+
+$pdo = connectToDb();
+
+$groceries = fetchAllGroceries($pdo);
+
 
 require 'index.view.php';

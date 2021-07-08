@@ -16,24 +16,25 @@
             <td>Subtotaal</td>
         </tr>
 
-        <?php foreach ($products as $product) : ?>
+        <?php foreach ($groceries as $groceries) : ?>
 
         <tr>
-            <td><?= $product["naam"]; ?></td>
-            <td class='productPrice'><?= $product["prijs"]; ?></td>
+            <td><?= $groceries["name"]; ?></td>
+            <td class='productPrice'><?= $groceries["price"]; ?></td>
             <td class='quantityChange'>
                 <button class="sub">-</button>
-                    <span class='productQuantity'><?=$product["aantal"];?></span>
+                    <span class='productQuantity'><?=$groceries["number"];?></span>
                 <button class="add">+</button>
             </td>
-            <td class='productTotalCost'><?=$product["aantal"] * $product["prijs"];?></td>
+            <td class='productTotalCost'><?=$groceries["price"] * $groceries["number"];?></td>
         </tr>
 
         <?php endforeach; ?>
 
+
         <tr>
             <td class='totaal' colspan=3>Totaal</td>
-            <td class='totalCost'><?=$total;?></td>
+            <td class='totalCost'></td>
         </tr>
 
     </table>
