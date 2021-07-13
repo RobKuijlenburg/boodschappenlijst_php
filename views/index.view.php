@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,16 @@
     <title>Opdracht 7 - Boodschappenlijst</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<nav>
-<a href="">Boodschappen</a>
-</nav>
+    <nav>
+
+        <ul>
+            <li><a href="/">Lijst</a></li>
+            <li><a href="/create">Boodschappen</a></li>
+        </ul>
+
+    </nav>
     <table>
         <tr class='header'>
             <td>Product</td>
@@ -26,7 +33,7 @@
             <td class='productPrice'><?= $groceries->price; ?></td>
             <td class='quantityChange'>
                 <button class="sub">-</button>
-                    <span class='productQuantity'><?=$groceries->number;?></span>
+                <span class='productQuantity'><?=$groceries->number;?></span>
                 <button class="add">+</button>
             </td>
             <td class='productTotalCost'><?=$groceries->price * $groceries->number;?></td>
@@ -43,4 +50,5 @@
     </table>
     <script src="scripts.js"></script>
 </body>
+
 </html>

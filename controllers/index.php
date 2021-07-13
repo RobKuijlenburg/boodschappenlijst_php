@@ -1,7 +1,7 @@
 <?php
 
 $query = require 'Core/bootstrap.php';
-require 'Core/groceries.php';
+require 'Core/database/groceries.php';
 
 
 $groceries = $query->selectAll('groceries', 'Grocery');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-<nav>
-<a href="/">Lijst</a>
-</nav>
+    <nav>
+        <ul>
+
+            <li><a href="/">Lijst</a></li>
+            <li><a href="/create">Boodschappen</a></li>
+
+        </ul>
+
+    </nav>
     <h1>Boodschappen</h1>
     <form action="" method="post">
         <label for="naam">Naam</label>
@@ -22,4 +30,5 @@
         <button type="submit">Submit</button>
     </form>
 </body>
+
 </html>
