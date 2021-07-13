@@ -10,14 +10,10 @@
 </head>
 
 <body>
-    <nav>
 
-        <ul>
-            <li><a href="/groceries">Lijst</a></li>
-            <li><a href="/groceries/create">Boodschappen</a></li>
-        </ul>
+    <?php require('partials/nav.php'); ?>
 
-    </nav>
+
     <table>
         <tr class='header'>
             <td>Product</td>

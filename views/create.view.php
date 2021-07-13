@@ -10,14 +10,8 @@
 </head>
 
 <body>
-    <nav>
+<?php require('partials/nav.php'); ?>
 
-        <ul>
-            <li><a href="/groceries">Lijst</a></li>
-            <li><a href="/groceries/create">Boodschappen</a></li>
-        </ul>
-
-    </nav>
     <h1>Boodschappen</h1>
     <form action="" method="post">
         <label for="naam">Naam</label>
