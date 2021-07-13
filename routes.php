@@ -1,6 +1,6 @@
 <?php
 
 $router->define([
-    '' => 'controllers/index.php',
-    'create' => 'controllers/create.php'
+    'groceries' => 'controllers/index.php',
+    'groceries/create' => 'controllers/create.php'
 ]);
