@@ -1,7 +1,7 @@
 <?php require('partials/head.php'); ?>
 
     <h1>Boodschappen</h1>
-    <form action="/add_groceries.php" method="POST">
+    <form action="add" method="POST">
         <label for="naam">Naam</label>
         <input type="text" name="naam" id="naam">
         <label for="aantal">Aantal</label>

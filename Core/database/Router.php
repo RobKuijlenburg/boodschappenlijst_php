@@ -2,7 +2,7 @@
 
 class Router {
 
-    protected  $routes = [
+    public  $routes = [
 
         'GET' => [],
 
@@ -17,12 +17,6 @@ class Router {
         require $file;
 
         return $router;
-    }
-
-    public function define($routes){
-
-        $this->routes = $routes;
-
     }
 
     public function get($uri, $controller){
