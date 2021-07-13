@@ -1,17 +1,22 @@
 <?php
 
+$app = [];
 
-$config = require 'config.php';
+$app['config'] = require 'config.php';
 
-require_once 'Core/database/Router.php';
+require 'Core/database/Router.php';
 
-require_once 'Core/database/Connection.php';
+require 'core/Request.php';
 
-require_once 'Core/database/QueryBuilder.php';
+require 'Core/database/Connection.php';
+
+require 'Core/database/QueryBuilder.php';
+
+require 'Core/database/groceries.php';
 
 
-return new QueryBuilder(
+$app['database'] = new QueryBuilder(
 
-    Connection::make($config['database'])
+    Connection::make($app['config']['database'])
 
 );
