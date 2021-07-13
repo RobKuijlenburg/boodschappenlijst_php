@@ -1,12 +1,9 @@
 <?php
 
-$query = require 'bootstrap.php';
-require 'groceries.php';
+$database = require 'Core/bootstrap.php';
 
+$uri = trim($_SERVER['REQUEST_URI'], '/');
 
-$groceries = $query->selectAll('groceries', 'Grocery');
+$router = Router::load('routes.php');
 
- 
-// dd($groceries);
-require 'functions.php';
-require 'index.view.php';
+require $router->direct($uri);
